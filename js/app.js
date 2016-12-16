@@ -112,7 +112,7 @@ Player.prototype.handleInput = function(kC) {
 // Checks to see if player is colliding with enemies
 var checkCollisions = function() {
 	allEnemies.forEach(function(enemies) {
-		if (enemies.left < this.right && enemies.right > this.left && enemies.top < this.bottom && enemies.bottom > this.top) {
+		if (enemies.left < player.right && enemies.right > player.left && enemies.top < player.bottom && enemies.bottom > player.top) {
 			dead = true; // Kills player
 		}
 	});
